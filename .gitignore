@@ -1,0 +1,26 @@
+# Virtualenv
+venv/
+.env/
+*.pyc
+__pycache__/
+
+# Dados grandes
+images/
+labels/       
+*.zip
+*.tar
+*.tar.gz
+
+# Checkpoints de treino
+runs/
+weights/
+*.pt
+*.pth
+*.onnx
+
+# Config local
+*.log
+.DS_Store
+
+
+csv/
