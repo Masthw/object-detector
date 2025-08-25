@@ -1,0 +1,15 @@
+# Number of classes
+nc: 1
+
+# Class names
+names: ["Car"] 
+
+# Diretórios do dataset (caminho absoluto)
+train: /media/matheus/dados/Projetos/Python/object-detector/dataset/images/train
+val: /media/matheus/dados/Projetos/Python/object-detector/dataset/images/train
+test: /media/matheus/dados/Projetos/Python/object-detector/dataset/images/train
+
+# Diretórios dos labels
+train_labels: /media/matheus/dados/Projetos/Python/object-detector/dataset/labels/train
+val_labels: /media/matheus/dados/Projetos/Python/object-detector/dataset/labels/train
+test_labels: /media/matheus/dados/Projetos/Python/object-detector/dataset/labels/train

@@ -9,12 +9,11 @@ max_validation = 500                  # número máximo de imagens de validation
 validation_file = 'validation_image_list.txt'  # arquivo temporário para o downloader
 # ========================
 
-# 1️⃣ Cria arquivo temporário apenas com as primeiras 500 imagens de validation
 with open(txt_file, 'r') as f, open(validation_file, 'w') as out_f:
     count = 0
     for line in f:
-        line = line.strip()         # remove espaços e quebras de linha
-        if not line:                # ignora linhas vazias
+        line = line.strip()    
+        if not line:               
             continue
         if line.startswith('validation/'):
             out_f.write(line + '\n')
@@ -24,7 +23,7 @@ with open(txt_file, 'r') as f, open(validation_file, 'w') as out_f:
 
 print(f"Arquivo {validation_file} criado com {count} imagens de validation.")
 
-# 2️⃣ Chama o downloader.py para baixar as imagens
+
 subprocess.run([
     'python', 'downloader.py',
     validation_file,
@@ -34,7 +33,7 @@ subprocess.run([
 
 print("Download das imagens concluído.")
 
-# 3️⃣ Organiza as imagens dentro da pasta images/validation/
+
 validation_folder = os.path.join(download_folder, 'validation')
 if not os.path.exists(validation_folder):
     os.makedirs(validation_folder)

@@ -9,7 +9,7 @@ filenames = ['oidv6-train-annotations-bbox.csv',
 with open('car_image_list.txt', 'w') as out_f:
     for split, fname in zip(splits, filenames):
         with open(fname, 'r') as f:
-            next(f)  # pula o cabeçalho
+            next(f) 
             for line in f:
                 parts = line.split(',')
                 image_id, _, class_id = parts[0], parts[1], parts[2]

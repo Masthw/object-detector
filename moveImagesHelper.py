@@ -23,7 +23,6 @@ with open(txt_file, 'r') as f:
         if not line:
             continue
         split, image_id = line.split('/')
-        # Ignora validation/test, que já tem pasta própria
         if split == 'train':
             src = os.path.join(all_images, f'{image_id}.jpg')
             dst = os.path.join(images_folder, split, f'{image_id}.jpg')

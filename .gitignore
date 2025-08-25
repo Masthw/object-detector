@@ -6,7 +6,8 @@ __pycache__/
 
 # Dados grandes
 images/
-labels/       
+labels/   
+videos/    
 *.zip
 *.tar
 *.tar.gz
